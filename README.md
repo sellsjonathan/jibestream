@@ -14,4 +14,4 @@ This project uses [google-maps-react](https://github.com/fullstackreact/google-m
 
 ## How to initialize
 
-As per [Create React App](https://github.com/facebookincubator/create-react-app), run `yarn start` from your console to compile and run the application, which after compilation, will be accessible at `http://localhost:3000/`
+As per [Create React App](https://github.com/facebookincubator/create-react-app), run `npm start` or `yarn start` from your console to compile and run the application, which after compilation, will be accessible at `http://localhost:3000/`.
