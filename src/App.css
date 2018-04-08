@@ -1,0 +1,116 @@
+.searchContainer {
+  padding-bottom: 10px;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.searchContainer .title {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer form {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.searchContainer input {
+  height: 30px;
+  width: 75%;
+  padding: 5px;
+  border: 0;
+  transition: all 500ms ease-out;
+}
+
+.searchContainer button {
+  background-color: #e53934;
+  border: none;
+  padding: 5px 10px;
+  display: flex;
+  width: 25%;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 500ms ease-out;
+}
+.searchContainer button:hover {
+  cursor: pointer;
+  background-color: #c70231;
+}
+
+.searchContainer input:focus {
+  outline: none;
+  background-color: #ddd;
+}
+.searchContainer button:focus {
+  outline-color: #c70231;
+}
+
+.searchContainer button span {
+  margin-left: 5px;
+}
+
+.searchContainer h1 {
+  font-family: 'Caveat', cursive;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+
+.searchContainer h2 {
+  font-family: 'Caveat', cursive;
+  color: #e53934;
+  margin: 0;
+}
+
+/*** ICON classes ***/
+
+.smIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+@media only screen and (min-width: 680px) {
+  .searchContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .searchContainer .title {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .searchContainer h1 {
+    margin-right: 0px;
+  }
+
+  .searchContainer form {
+    width: auto;
+  }
+
+  .searchContainer input {
+    width: 350px;
+  }
+
+  .searchContainer button {
+    width: auto;
+  }
+}
