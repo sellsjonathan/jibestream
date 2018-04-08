@@ -1,7 +1,10 @@
 ## Description of the project
 
 This project is a demonstration of integrating the Google maps API within a React application.
-This application allows users to search a Google map, and have it jump to that area.
+
+This application allows users to search a Google map, and have it jump to a queried area. The application also makes use of Google maps autocomplete to help users find relavent places to position the map to.
+
+[View live demo](https://suspicious-borg-36a5b5.netlify.com/)
 
 ## Main dependencies
 
@@ -11,4 +14,4 @@ This project uses [google-maps-react](https://github.com/fullstackreact/google-m
 
 ## How to initialize
 
-As per [Create React App](https://github.com/facebookincubator/create-react-app), `yarn start` to compile and run application, which is accessible at `http://localhost:3000/`
+As per [Create React App](https://github.com/facebookincubator/create-react-app), run `yarn start` from your console to compile and run the application, which after compilation, will be accessible at `http://localhost:3000/`
