@@ -1,69 +1,29 @@
 import React from 'react';
 import { Map, Marker } from 'google-maps-react';
 
-import Icon from './Icon';
+import SearchBar from './SearchBar';
 
 export default class MapContainer extends React.Component {
   state = {
     position: null
   };
 
-  componentDidMount() {
-    this.renderAutoComplete();
-  }
+  mapRef = React.createRef();
 
-  onSubmit(event) {
-    event.preventDefault();
-  }
-
-  renderAutoComplete() {
-    const { google } = this.props;
-    const gMap = this.mapRef.map;
-
-    const autocomplete = new google.maps.places.Autocomplete(this.autocomplete);
-    autocomplete.bindTo('bounds', gMap);
-
-    autocomplete.addListener('place_changed', () => {
-      const place = autocomplete.getPlace();
-
-      if (!place.geometry) {
-        return;
-      }
-
-      if (place.geometry.viewport) {
-        gMap.fitBounds(place.geometry.viewport);
-      } else {
-        gMap.setCenter(place.geometry.location);
-        gMap.setZoom(17);
-      }
-
-      this.setState({ position: place.geometry.location });
-    });
-  }
+  getPosition = mapPosition => this.setState({ position: mapPosition });
 
   render() {
     const { position } = this.state;
     return (
       <div>
-        <header className="searchContainer" onSubmit={this.onSubmit}>
-          <div className="title">
-            <h1>Jonathan Sells</h1>
-            <h2>for Jibestream</h2>
-          </div>
-          <form>
-            <input
-              placeholder="Enter a location"
-              type="text"
-              ref={ref => (this.autocomplete = ref)}
-            />
-            <button type="submit">
-              <Icon size="sm" /> <span>Search map</span>
-            </button>
-          </form>
-        </header>
+        <SearchBar
+          google={this.props.google}
+          map={this.mapRef}
+          getPosition={this.getPosition}
+        />
         <main>
           <Map
-            ref={ref => (this.mapRef = ref)}
+            ref={this.mapRef}
             google={this.props.google}
             zoom={19}
             initialCenter={{
