@@ -39,12 +39,14 @@
   padding: 5px 10px;
   display: flex;
   width: 25%;
+  min-width: 145px;
   align-items: center;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   transition: all 500ms ease-out;
 }
+
 .searchContainer button:hover {
   cursor: pointer;
   background-color: #c70231;
@@ -54,6 +56,7 @@
   outline: none;
   background-color: #ddd;
 }
+
 .searchContainer button:focus {
   outline-color: #c70231;
 }
