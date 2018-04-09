@@ -5,7 +5,6 @@ import './App.css';
 import { GoogleApiWrapper } from 'google-maps-react';
 // myComponents
 import MapContainer from './components/MapContainer';
-import SearchBar from './components/SearchBar';
 
 class App extends React.Component {
   render() {
