@@ -4,7 +4,6 @@ This project is a demonstration of integrating the Google maps API within a Reac
 
 This application allows users to search a Google map, and have it jump to a queried area. The application also makes use of Google maps autocomplete to help users find relavent places to position the map to.
 
-[View live demo](https://suspicious-borg-36a5b5.netlify.com/)
 
 ## Main dependencies
 
